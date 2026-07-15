@@ -265,27 +265,87 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
-/* ============ Photo slots (until real photos arrive) ============ */
+/* ============ Photos ============ */
 
-.photo-slot {
-  border: 1.5px dashed #343943;
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  object-fit: cover;
   border-radius: var(--radius);
-  background:
-    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.018) 0 12px, transparent 12px 24px),
-    var(--surface);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  color: #6b717c;
-  font-size: 0.9rem;
-  font-weight: 500;
+  border: 1px solid var(--line);
+  display: block;
 }
-.photo-slot svg { width: 30px; height: 30px; }
 
-.photo-slot-hero { aspect-ratio: 6 / 5; }
-.photo-slot-portrait { aspect-ratio: 4 / 5; }
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  display: block;
+}
+
+/* ============ Work ============ */
+
+.work { padding: 0 0 112px; }
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.work-card {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+}
+.work-card:hover { transform: translateY(-4px); border-color: #3d4350; }
+
+.work-card > img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 4px);
+  display: block;
+}
+
+.work-pair { grid-column: span 2; }
+
+.pair-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.pair-half img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: calc(var(--radius) - 4px);
+  display: block;
+}
+.pair-label {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--volt);
+}
+
+.work-wide { grid-column: span 2; }
+.work-wide > img { aspect-ratio: 2 / 1; }
+
+.work-caption {
+  margin-top: 12px;
+  padding: 0 4px 4px;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
 
 /* ============ Marquee ============ */
 
@@ -609,6 +669,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-card.card-volt { grid-row: auto; grid-column: span 2; }
   .service-card.card-coal { grid-column: span 2; }
   .about-media { max-width: 520px; }
+  .work-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 700px) {
@@ -626,7 +687,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .service-grid { grid-template-columns: 1fr; }
   .service-card.card-volt { grid-column: auto; grid-row: auto; }
   .service-card.card-coal { grid-column: auto; }
+  .work-grid { grid-template-columns: 1fr; }
+  .work-pair, .work-wide { grid-column: auto; }
+  .work-wide > img { aspect-ratio: 4 / 3; }
+  .work { padding-bottom: 80px; }
   .field-row { flex-direction: column; gap: 20px; }
-  .photo-slot.offset { margin-top: 0; }
   .contact-form { padding: 24px 20px; }
 }
