@@ -8,9 +8,9 @@
   --line-soft: #1f2228;
   --text: #f4f4f1;
   --muted: #9ba1ab;
-  --volt: #f5b310;
-  --volt-dim: #8a6600;
-  --volt-glow: rgba(245, 179, 16, 0.14);
+  --volt: #38bdf8;
+  --volt-dim: #1e6f9e;
+  --volt-glow: rgba(56, 189, 248, 0.14);
   --ink: #131418;
   --radius: 12px;
 }
@@ -62,7 +62,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .btn-volt { background: var(--volt); color: var(--ink); }
 .btn-volt:hover {
-  background: #ffc21e;
+  background: #5ecdfc;
   box-shadow: 0 6px 24px var(--volt-glow);
   transform: translateY(-1px);
 }
@@ -220,7 +220,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   left: -240px;
   width: 640px;
   height: 640px;
-  background: radial-gradient(circle, rgba(245, 179, 16, 0.05), transparent 60%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.05), transparent 60%);
   pointer-events: none;
 }
 
@@ -371,9 +371,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   grid-row: span 2;
   padding: 36px 34px;
   background:
-    radial-gradient(120% 130% at 85% 0%, rgba(245, 179, 16, 0.22), transparent 55%),
-    linear-gradient(160deg, #23200f, var(--surface));
-  border-color: #453b14;
+    radial-gradient(120% 130% at 85% 0%, rgba(56, 189, 248, 0.22), transparent 55%),
+    linear-gradient(160deg, #0f1e28, var(--surface));
+  border-color: #14384d;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -389,7 +389,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   background: radial-gradient(circle, var(--volt-glow), transparent 65%);
   pointer-events: none;
 }
-.card-volt:hover { border-color: #665617; box-shadow: 0 16px 48px rgba(245, 179, 16, 0.08); }
+.card-volt:hover { border-color: #1e567a; box-shadow: 0 16px 48px rgba(56, 189, 248, 0.08); }
 .card-volt svg { width: 36px; height: 36px; }
 .card-volt h3 { font-family: "Archivo Black", "Archivo", sans-serif; font-weight: 400; font-size: 1.55rem; }
 .card-volt p { max-width: 44ch; }
@@ -400,8 +400,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .card-coal svg { color: var(--ink); }
 .card-coal h3 { color: var(--ink); }
-.card-coal p { color: #4d3f0e; }
-.card-coal:hover { box-shadow: 0 16px 40px var(--volt-glow); border-color: #ffc21e; }
+.card-coal p { color: #0d3a50; }
+.card-coal:hover { box-shadow: 0 16px 40px var(--volt-glow); border-color: #5ecdfc; }
 
 /* ============ About ============ */
 
@@ -433,7 +433,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .coverage-inner {
   position: relative;
   background:
-    radial-gradient(90% 120% at 50% -20%, rgba(245, 179, 16, 0.10), transparent 60%),
+    radial-gradient(90% 120% at 50% -20%, rgba(56, 189, 248, 0.10), transparent 60%),
     var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -471,8 +471,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 .area-list li:hover { border-color: var(--volt-dim); }
 .area-list li:last-child {
-  background: rgba(245, 179, 16, 0.09);
-  border-color: #4d420f;
+  background: rgba(56, 189, 248, 0.09);
+  border-color: #14435c;
   color: var(--volt);
   font-weight: 600;
 }
@@ -493,7 +493,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   left: -180px;
   width: 640px;
   height: 640px;
-  background: radial-gradient(circle, rgba(245, 179, 16, 0.08), transparent 62%);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.08), transparent 62%);
   pointer-events: none;
 }
 
