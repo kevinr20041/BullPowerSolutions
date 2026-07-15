@@ -276,15 +276,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display: block;
 }
 
-.about-photo {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  display: block;
-}
-
 /* ============ Work ============ */
 
 .work { padding: 0 0 112px; }
@@ -467,24 +458,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .about { padding: 0 0 112px; }
 
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 72px;
-  align-items: center;
-}
+.about-inner { max-width: 70ch; }
 
 .about-copy h2 { font-size: clamp(2rem, 3.6vw, 2.9rem); margin-bottom: 22px; }
 .about-copy p { color: var(--muted); margin-bottom: 16px; max-width: 52ch; }
 .about-copy .btn { margin-top: 14px; }
-
-.about-media {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-  align-items: start;
-}
-.photo-slot.offset { margin-top: 44px; }
 
 /* ============ Coverage ============ */
 
@@ -664,11 +642,10 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 /* ============ Responsive ============ */
 
 @media (max-width: 900px) {
-  .hero-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .service-grid { grid-template-columns: 1fr 1fr; }
   .service-card.card-volt { grid-row: auto; grid-column: span 2; }
   .service-card.card-coal { grid-column: span 2; }
-  .about-media { max-width: 520px; }
   .work-grid { grid-template-columns: 1fr 1fr; }
 }
 
